@@ -1,0 +1,4 @@
+Spring: Spring is a framework  of framework which use IOC for creating Object.
+         Other word u can say : Taking control from user for making object of any class & make object by itself
+         Spring  IOC container i.e ApplicationContext or BeanFactory.
+         use those object anywhere by using dependency injection.
