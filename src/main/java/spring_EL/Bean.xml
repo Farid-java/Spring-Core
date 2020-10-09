@@ -10,6 +10,6 @@
     
     <context:annotation-config />
  
- <context:component-scan base-package="spring.expressionlanguage"   />
+ <context:component-scan base-package="spring_EL"   />
 
   </beans>

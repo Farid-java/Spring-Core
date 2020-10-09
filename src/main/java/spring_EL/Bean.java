@@ -9,9 +9,9 @@ public class Bean {
 	private String name;
 	  @Value("#{test }") //SpEL for object injecting :- test is decapitalized of Test Class
 	  private Test  constt;
-	 @Value("#{T(spring.expressionlanguage.Test).number1(1) }")//SpEL call for static method
+	 @Value("#{T(spring_EL.Test).number1(1) }")//SpEL call for static method
 	private int m;
-	@Value("#{ new spring.expressionlanguage.Test().number(9) }")//SpEL call for method
+	@Value("#{ new spring_EL.Test().number(9) }")//SpEL call for method
 	private int  staticm;
 	
 public Test getConstt() {  return constt; }

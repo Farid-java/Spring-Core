@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Test {
 	
 	public static void main(String[] args) {
-	ApplicationContext c=	new ClassPathXmlApplicationContext(" spring/expressionlanguage/Bean.xml");
+	ApplicationContext c=	new ClassPathXmlApplicationContext("spring_EL/Bean.xml");
 	 Bean b=c.getBean("bean", Bean.class)	;
 	 System.out.println(b);
 	}

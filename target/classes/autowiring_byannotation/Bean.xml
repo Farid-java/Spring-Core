@@ -10,17 +10,17 @@
     
     <context:annotation-config />
  
- <bean   name="hello"  class="autowiring.byannotation.Address" >
+ <bean   name="hello"  class="autowiring_byannotation.Address" >
 <property name="name" value="farid1" />
 <property name="City"  value="Mumbai1" />
 </bean>   
-<bean   name="bean"  class="autowiring.byannotation.Address" >
+<bean   name="bean"  class="autowiring_byannotation.Address" >
 <property name="name" value="farid" />
 <property name="City"  value="Mumbai" />
 </bean>
 
 
-<bean name="bea"  class="autowiring.byannotation.Bean"  />
+<bean name="bea"  class="autowiring_byannotation.Bean"  />
  
 
     </beans>

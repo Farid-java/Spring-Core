@@ -8,7 +8,7 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-<bean  name="aobj" class="com.injection.objectref.A" p:a="2" p:b-ref="bobj" />
+<bean  name="aobj" class="inject_object_reference.A" p:a="2" p:b-ref="bobj" />
 
 <!-- <property name="a"  value="1" />
 <property name="b"  ref="bobj"/>
@@ -18,7 +18,7 @@
 </property>
 </bean> -->
 
-<bean name="bobj"  class="com.injection.objectref.B">
+<bean name="bobj"  class="inject_object_reference.B">
 <property name="b"  value="2"/>
 <property name="name"  value="FARID" />
 </bean>
