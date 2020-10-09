@@ -2,3 +2,46 @@ Spring: Spring is a framework  of framework which use IOC for creating Object.
          Other word u can say : Taking control from user for making object of any class & make object by itself
          Spring  IOC container i.e ApplicationContext or BeanFactory.
          use those object anywhere by using dependency injection.
+         
+         
+Spring Container Flow: 1 -When u pass xml file to IOC container as :
+                         ApplicationContext context=new ClassPathXmlApplicationContext("autowiring/byannotation/Bean.xml");
+                       2- ApplicationContext Container create object of class which is present in Bean.xml & put into id
+                          of bean tag and injecting value to class if u pass value in xml by setter or constructor injection.
+                       3- get object as Bean b=(Bean) context.getBean("bea"); here bea is id of bean tag.
+                       
+         
+Spring (IOC)Container :  Application Context(Interface)	          BeanFactory(Interface)
+                      1- It is child interface of BeanFactory  	It is parent interface of Application Context
+                      2- It support Object creating ,DI ,Security       It support creating only object and dependecy injection
+                        ,transaction, messaging and autoscanning 
+                      3- It create object of bean at the time loading   It not create object of bean upto request time
+                         ,it means there is early loading               means BeanFactory load beans laziely
+                      4- It support all beans scope	                  It support only two scope (singleton and prototype)
+
+
+Spring container:  Spring Use Spring IOC Container for making object of class and DI for injecting value to property 
+                   of class by using Setter getter injection and Construction injection.
+                   DI can inject primitive data type, Collection and object of any class to other class.          
+                   
+Bean LifeCycle : 1- Object creation which is in bean tag by Spring IOC Container.  
+                 2-value initialization to the property of Bean class .   
+                 3-run init method but should be mentioned in bean tag inside xml. 
+                 4-getBean object where u want by using ApplicationContext (IOC container).
+                 5-run destroy method but should be mentioned in bean tag inside xml.     
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
