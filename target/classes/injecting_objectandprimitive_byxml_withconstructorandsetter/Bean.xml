@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:p="http://www.springframework.org/schema/p"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <bean   name="hello"  class="injecting_objectandprimitive_byxml_withconstructorandsetter.Bean1"  ><!-- here name="hello" is same as Bean class property as hello -->
+<property name="name" value="farid1" />
+<property name="City"  value="Mumbai1" />
+</bean>   
+<bean   name="bean"  class="injecting_objectandprimitive_byxml_withconstructorandsetter.Bean1" ><!-- here name="bean" is same as Bean class property as bean -->
+<property name="name" value="farid" />
+<property name="City"  value="Mumbai" />
+</bean>
+
+<!-- NOTE: injecting object and primitive by setter and getter method => using byName means Bean1 class has two name hello and bean -->
+
+<!-- <bean name="bea"  class="injecting_objectandprimitive_byxml_withconstructorandsetter.Bean" autowire="byName"  >
+<property name="a" value="10" />
+</bean>  -->
+
+<!-- NOTE : injecting object and primitive by setter and getter method => using byType means Bean1 class has only one type
+   injecting_objectandprimitive_byxml_withconstructorandsetter.Bean1 => in case of byType only one Bean property should
+    be in Bean.xml -->
+    
+<!-- <bean name="bea"  class="injecting_objectandprimitive_byxml_withconstructorandsetter.Bean" autowire="byType"  >
+<property name="a" value="10" />
+</bean> -->
+
+<!-- NOTE: injecting object and primitive by constructor, so parameterized constructor is must -->
+
+<!-- <bean name="bea"  class="injecting_objectandprimitive_byxml_withconstructorandsetter.Bean" autowire="constructor"  >
+<constructor-arg value="10"  type="int"/>
+</bean> -->
+
+<!-- NOTE: injecting object and primitive by setter getter method using P_Schema 
+      default constructor is must  -->
+      
+<bean name="bea"  class="injecting_objectandprimitive_byxml_withconstructorandsetter.Bean"  p:bean-ref="hello"  p:hello-ref="bean" p:a="10" >
+ 
+</bean>
+
+ </beans>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xmlns:p="http://www.springframework.org/schema/p"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <!-- in construction injection,  no need to apply property for injecting object  -->
+    <!--  by default scope is singleton class but u can change to prototype as followes  -->
+    
+<bean name="model"  class="bean_scop.Model"   autowire="constructor"  scope="prototype"> 
+</bean>
+
+<bean name="bean"  class="bean_scop.Bean"  >
+<constructor-arg  value="10" />
+<constructor-arg value="Farid" />
+</bean>
+
+    </beans>

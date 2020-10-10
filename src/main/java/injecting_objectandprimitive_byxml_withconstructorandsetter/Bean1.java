@@ -1,4 +1,4 @@
-package autowiring_byxml;
+package injecting_objectandprimitive_byxml_withconstructorandsetter;
 
 public class Bean1 {
 

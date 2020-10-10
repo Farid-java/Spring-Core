@@ -1,5 +1,8 @@
-package autowiring_byannotation;
+package injecting_objectandprimitive_bysemi_annotation_usingcontext;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Address {
 
 	private String name, city;

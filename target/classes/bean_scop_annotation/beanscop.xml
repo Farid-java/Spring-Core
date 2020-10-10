@@ -9,18 +9,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
     
     <context:annotation-config />
- 
- <bean   name="hello"  class="autowiring_byannotation.Address" >
-<property name="name" value="farid1" />
-<property name="City"  value="Mumbai1" />
-</bean>   
-<bean   name="bean"  class="autowiring_byannotation.Address" >
-<property name="name" value="farid" />
-<property name="City"  value="Mumbai" />
-</bean>
-
-
-<bean name="bea"  class="autowiring_byannotation.Bean"  />
- 
-
+    <!-- component Scan is used scan all component means all classes and keep object itself whenever 
+      we require use @Autowire  -->
+   <context:component-scan base-package="bean_scop_annotation"></context:component-scan>
     </beans>
