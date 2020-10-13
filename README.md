@@ -11,3 +11,4 @@ Spring Context :  inject object by using xml and annoatation
 Spring EL:  used to inject object by using xml and Expression language annoation 
             in XML       : context:component-Scan is use to scan class and making object of class , keep itself
              Spring EL   : @Value("#{test }") //SpEL for object injecting :- test is decapitalized of Test Class
+  
